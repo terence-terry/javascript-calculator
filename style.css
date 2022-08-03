@@ -1,54 +1,59 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: poppins, sans-serif;
-
+    outline: none;
+    font-family: sans-serif;
+    background-color: #ecf0f3;
 }
-body {
+.container{
+    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: #091921;
+    justify-content: center;
+    background-color: #ecf0f3;
 }
-.calculator {
-    mask-position: relative;
+.calc {
+    box-shadow: 6px 6px 13px #fff,
+            6px 6px 6px 13px rgba(0, 0, 0, .16);
+    border-radius: 28px;
+    padding: 16px;
     display: grid;
-     
+    grid-template-columns:repeat(4,66px);
 }
-.calculator .value {
-     grid-column: span 4;
-     height: 100hv;
-     text-align: right;
-     border: none;
-     outline: none;
-     padding: 10px;
-     font-size: 18px;
+input {
+    grid-column: span 4;
+    height: 68px;
+    width: 258px;
+    box-shadow: inset -6px -6px 13px #fff,
+                inset 6px 6px 6px 13px rgba(0, 0, 0, .16); 
+    background-color: #ecf0f3;
+    border: none;
+    border-radius: 32px;
+    color: rgb(26,25,25);
+    text-align: end;
+    margin: 40px 0px 30px 0px;
+    padding: 20px;
+    font-size: 40px;
 }
-.calculator span{
-    display: grid;
-    width: 60px;
-    height: 60px;
-    color: #fff;
-    background: rgb(255, 0, 255) ;
-    place-items: center;
-    border: 1px solid #000000;
+button{
+    box-shadow:  inset 6px 6px 13px #fff,
+   6px 6px 6px 13px rgba(0, 0, 0, .16); 
+background-color: #ecf0f3;
+border: none;
+border-radius: 50%;
+width: 50px;
+height: 50px;
+margin: 15px;
+font-weight: bold;
+font-size: 20px;
 }
-.calculator span:active {
-    background: #74ff3b;
-    color: #111;
-}
-.calculator span.clear {
-    grid-column: span 2;
+
+.equal{
     width: 120px;
-    background: #b40d15;
-}
-.calculator span.plus {
-    grid-row:span 2 ;
-    height: 120px;
-}
-.calculator span.equal {
-    background: #03ff81;
+    border-radius: 42px;
+    box-shadow:  inset 6px 6px 13px #fff,
+    6px 6px 6px 13px rgba(0, 0, 0, .16); 
+ background-color: #ecf0f3;
 
 }
